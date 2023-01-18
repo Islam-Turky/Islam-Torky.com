@@ -286,7 +286,7 @@ section  .bar_container{
     display: flex;
     justify-content:space-evenly;
     align-items: center;
-    background: url(/chair.jpg) no-repeat;
+    background: url(chair.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
