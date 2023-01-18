@@ -1,0 +1,105 @@
+@media screen and (max-width:375px){    
+    header .container{
+        flex-direction: column;
+    }
+
+    header .container .links{
+        display: none;
+    }
+
+    #bar{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #bar .links{
+        display: none;
+    }
+
+    #Services .services_container{
+        flex-direction: column;
+    }
+
+    #Projects .projects_container{
+        flex-direction: column;
+    }
+
+    #About .about_container{
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #About  .about_container .circle{
+        display: none;
+    }
+
+    #About  .about_container .box1{
+        margin-right: 30px;
+        width: 370px;
+    } 
+    
+    #Contacts .contacts_container{
+        flex-direction: column;
+    }
+
+    #Contacts .contacts_container .box2{
+        display: none;
+    }
+
+    #Contacts .contacts_container .response{
+        margin-left: 130px;
+    }
+}
+
+@media screen and (max-width:790px){
+    header .container{
+        flex-direction: column;
+    }
+
+    header .container .links{
+        display: none;
+    }
+
+    #bar{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #bar .links{
+        display: none;
+    }
+
+    #Services .services_container{
+        flex-direction: column;
+    }
+
+    #Projects .projects_container{
+        flex-direction: column;
+    }
+
+    #About .about_container{
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #About  .about_container .circle{
+        display: none;
+    }
+
+    #About  .about_container .box1{
+        margin-right: 30px;
+        width: 370px;
+    } 
+    
+    #Contacts .contacts_container{
+        flex-direction: column;
+    }
+
+    #Contacts .contacts_container .box2{
+        display: none;
+    }
+
+    #Contacts .contacts_container .response{
+        margin-left: 130px;
+    }
+}

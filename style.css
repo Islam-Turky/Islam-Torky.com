@@ -1,0 +1,647 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Moon+Dance&family=Righteous&display=swap');
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: column; 
+}
+/* Header */
+/* navbar */
+.wrapper .sidebar{
+    background: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 255px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .profile{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.wrapper .sidebar .profile img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.wrapper .sidebar .profile h3{
+    color: rgb(231, 173, 48);
+    margin: 10px 0 5px;
+    font-family: 'Moon Dance', cursive;
+}
+
+.wrapper .sidebar .profile p{
+    color: rgb(231, 173, 48);
+    font-size: 20px;
+    font-family: 'Moon Dance', cursive;
+}
+
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid beige;
+    color: beige;
+    font-size: 16px;
+    position: relative;
+    text-decoration: none;
+    font-family: 'Lobster', sans-serif;
+}
+
+.wrapper .sidebar ul li a .icon{
+    color: rgb(231, 173, 48);
+    width: 30px;
+    display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    color: rgb(255, 174, 0);
+    background: white;
+    border-right: 2px solid;
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: black;
+}
+
+.wrapper .sidebar ul li a:hover::before,
+.wrapper .sidebar ul li a.active::before{
+    display: block;
+}
+
+.wrapper .section {
+    width: calc(100% - 255px);
+    margin-left: 255px;
+    transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.wrapper .section .top_navbar .hamburger a{
+    font-size: 28px;
+    color: beige;
+    cursor: pointer;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+    color: rgb(238, 196, 106);
+}
+
+body.active .wrapper .sidebar{
+    left: -255px;
+} 
+
+body.active .wrapper .section{
+    margin-left: 0;
+    width: 100%;
+}
+
+.dark-mode{
+    background-color: black;
+    color: beige;
+
+}
+
+
+.switch {
+    --switch-width: 3.5em;
+    --switch-height: calc(var(--switch-width) / 2);
+    --left-ball-color: black;
+    --right-ball-color: white;
+    width: var(--switch-width);
+    height: var(--switch-height);
+    border-radius: calc(var(--switch-height) / 2);
+    background-color: var(--left-ball-color);
+    position: relative;
+    overflow: hidden;
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+  
+  .switch input[type="checkbox"] {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+  }
+  
+  .switch .left {
+    position: absolute;
+    width: calc(var(--switch-width) / 3);
+    height: calc(var(--switch-height) / 1.5);
+    background-color: var(--left-ball-color);
+    border-radius: 50%;
+    left: calc((var(--switch-height) - (var(--switch-height) / 1.5)) / 2);
+    top: calc((var(--switch-height) - (var(--switch-height) / 1.5)) / 2);
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .switch .right {
+    position: absolute;
+    width: calc(var(--switch-width) / 3);
+    height: calc(var(--switch-height) / 1.5);
+    background-color: var(--right-ball-color);
+    border-radius: 50%;
+    right: calc((var(--switch-height) - (var(--switch-height) / 1.5)) / 2);
+    top: calc((var(--switch-height) - (var(--switch-height) / 1.5)) / 2);
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .switch .switcher {
+    position: absolute;
+    width: calc(100% + var(--switch-width) / 3);
+    height: 100%;
+    background-color: var(--right-ball-color);
+    z-index: 1;
+    left: calc(-50% + var(--switch-width) / (3 * 2));
+    pointer-events: none;
+    transition: left 500ms ease;
+    border-top-left-radius: calc(var(--switch-width) / 3);
+    border-bottom-left-radius: calc(var(--switch-width) / 3);
+  }
+  
+  .switch .switcher:before {
+    position: absolute;
+    content: '';
+    width: calc(var(--switch-width) / 3);
+    height: 100%;
+    background-color: var(--left-ball-color);
+    display: block;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    z-index: 2;
+  }
+  
+  .switch .switcher:after {
+    position: absolute;
+    content: '';
+    width: calc(var(--switch-width) / 3);
+    height: 100%;
+    background-color: var(--right-ball-color);
+    display: block;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+  }
+  
+  .switch input:checked ~ .switcher {
+    left: 100%;
+  }
+  
+  .switch input:checked ~ .switcher:before {
+    display: none;
+  }
+
+
+
+
+/* navbar */
+
+header{
+    width: 100%;
+    position: fixed;
+    background: rgba(14, 1, 10, 0.356);
+}
+
+header .container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container .logo a{
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    color: rgb(231, 173, 48);
+}
+
+header .container .links a{
+    font-family:'Lobster', sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    color: beige;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: 0.5s;
+}
+
+header .container .links a:hover{
+    color: rgb(231, 173, 48);
+    border-right:5px rgb(231, 173, 48) solid;
+    border-left:5px rgb(231, 173, 48) solid;
+    border-radius: 50%;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+header .container button{
+    width:50px;
+    background-color:  rgb(231, 173, 48);
+    border-radius: 25px;
+}
+
+header .container button a{
+    text-decoration: none;
+    color: aliceblue;
+}
+/* Header */
+
+/* Bar */
+section  .bar_container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    background: url(/images/chair.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+section  .bar_container .links{
+    height: 50vh;
+    font-weight: 1000;
+    font-size:x-large;
+    padding-left: 600px;
+}
+
+section  .bar_container .links a i{
+    padding-bottom: 30px;
+    color: beige;
+}
+section  .bar_container .links a:hover i{
+    color: rgb(231, 173, 48);
+}
+
+section .bar_container .box{
+    padding-bottom: 60px;
+}
+
+section .bar_container .box h1{
+    font-family: 'Lobster';
+    font-weight: 800;
+    font-size: 40px;
+    color:rgb(238, 196, 106);
+}
+
+section .bar_container .box h3{
+    font-family: 'Moon Dance', cursive;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(238, 196, 106);
+}
+/* Bar */
+
+/* Address */
+section .address{
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: 800;
+    font-size: larger;
+    text-decoration: underline rgb(250, 184, 41);
+    text-decoration-thickness: 3px;
+}
+/* Address */
+/* srevices */
+section .services_container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    background: url(/images/lab.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+section .services_container .box{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 0 5px 25px rgb(75, 75, 75);
+    background-color: rgba(245, 245, 220, 0.336);
+    color:rgb(26, 0, 48);
+    transition: 0.7s ease;
+}
+
+section .services_container .box p{
+    color: rgb(247, 198, 92);
+    font-size: 19px;
+    text-align: center;
+    font-weight: 3000;
+    font-family: 'Righteous', cursive;
+}
+
+section .services_container .box h1{
+    color: rgb(250, 184, 41);
+    font-size: 30px;
+    background-color: beige;
+    border: 3px solid beige;
+    border-radius: 20px;
+    font-family: 'Lobster', cursive;
+}
+section .services_container .box:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+/* srevices */
+
+/* projects */
+section .projects_container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    background: url(/images/sha.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+section .projects_container .box0{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 0 5px 25px rgb(75, 75, 75);
+    background-color: rgba(245, 245, 220, 0.336);
+    color:rgb(26, 0, 48);
+}
+
+section .projects_container .box0:first-child .image{
+    width: 100%; 
+    height: 100%; 
+    background:url(/images/Screenshot\ from\ 2023-01-08\ 15-13-07.png) no-repeat;
+    background-size: cover;
+    background-position: top;
+    backface-visibility: hidden;
+}
+section .projects_container .box0:nth-child(2) .image{
+    width: 100%;
+    height: 100%;
+    background:url(/images/ss.png) no-repeat;
+    background-size: cover;
+    background-position: left;
+    backface-visibility: hidden;
+}
+section .projects_container .box0:last-child .image{
+    width: 100%;
+    height: 100%;
+    background:url(/images/odoo.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    backface-visibility: hidden;
+}
+section .projects_container .back{
+    position: fixed;    
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+section .projects_container .box0 .back a{
+    text-align: center;
+    text-decoration: none;
+    color: beige;
+    font-weight: 700;
+    font-size: 50px;
+    border-radius: 20px;
+}
+
+section .projects_container .box0 .back a:hover{
+    transform: scale(1.1); 
+    color: rgb(247, 198, 92); 
+}
+
+section .projects_container i{
+    color: black;
+    font-size: 40px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+section .projects_container .box0:hover{
+    transform: scale(1.1);
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+}
+
+/* projects */
+
+/* about */
+section .about_container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background: url(/images/aboutm.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+section .about_container .box1{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    padding-left: 20px;
+    box-shadow: 0 5px 25px rgb(75, 75, 75);
+    background: rgba(252, 252, 252, 0.459);
+    color: rgb(14, 10, 1);
+}
+
+section .about_container .box1 p{
+    font-weight: 800;
+    font-size: 30px;
+    font-family: 'Moon Dance', cursive;
+}
+
+section .about_container .circle{
+    width: 200px;
+    height: 200px;
+    margin-right: 80px;
+    background: url(/images/islampro.jpg) no-repeat;
+    background-size: cover;
+    background-position: top;
+    border-radius: 50%;
+    transition: 0.7s ease;
+    box-shadow: 0 5px 25px rgb(75, 75, 75)
+}
+section .about_container .circle:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+/* about */
+
+/* contacts */
+section .contacts_container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    background: url(/images/sand1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+section .contacts_container .box2{
+    width: 450px;
+    height: 250px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    background: url(/images/contact3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#Contacts .box2 .b{
+    margin-left: 40px;
+}
+#Contacts .box2 .links{
+    margin-top: 250px;
+    margin-left: 150px;
+}
+#Contacts .box2 .links .a {
+    position: absolute;
+    /* color: beige; */
+    font-weight: 700;
+    font-size: 30px;
+    margin-right: 150px;
+  } 
+
+  #Contacts .box2 .links .a a{
+    color: beige;
+    cursor: pointer;
+  }
+
+/* input */
+.response {
+    width: 30%;
+    height: 20%;
+    display: flex;
+    flex-wrap:wrap-reverse;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+ .contacts_container .box2 .links h3{
+    width: 58px;
+    border-radius: 10px;
+    color: beige;
+    background-color: rgb(245, 169, 6);
+  }
+
+input[type=text], select, textarea {
+    width: 250px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize:vertical;
+  }
+  
+  input[type=submit] {
+    background-color: rgb(250, 184, 41);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .response  .sub{
+    margin-left: 85px;
+  }
+  
+  input[type=submit]:hover {
+    background-color: rgb(247, 198, 92);
+}
+
+/* contacts */
+
+/* Footer */
+footer .footer_container{
+    min-height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    align-items: center;
+}
+
+footer .links a{
+    color: beige;
+    font-size: larger;
+}
+
+footer .footer_container .side{
+    color: beige;
+}
+
+footer .footer_container .links i{
+    padding-left: 10px;
+}
+
+footer .footer_container .logo{
+    position: absolute;
+    color: #ccc;
+    margin-right: 1000px;
+    font-weight: 900;
+    font-size: 40px;
+    font-family: 'Moon Dance', cursive;
+}
+
+/* Footer */
