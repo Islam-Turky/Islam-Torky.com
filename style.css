@@ -223,7 +223,8 @@ body.active .wrapper .section{
 header{
     width: 100%;
     position: fixed;
-    background: rgba(14, 1, 10, 0.356);
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: saturate(180%) blur(10px);
 }
 
 header .container{
