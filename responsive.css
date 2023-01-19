@@ -16,8 +16,20 @@
         display: none;
     }
 
+    #Services .box{
+        width: 300px;
+        height: 200px;
+        margin-left: 10px;
+    }
+
     #Services .services_container{
         flex-direction: column;
+    }
+
+    #Projects .box0{
+        width: 300px;
+        height: 200px;
+        margin-left: 10px;
     }
 
     #Projects .projects_container{
@@ -34,8 +46,9 @@
     }
 
     #About  .about_container .box1{
-        margin-right: 30px;
-        width: 370px;
+        margin-left: 10px;
+        width: 270px;
+        height: 400px;
     } 
     
     #Contacts .contacts_container{
@@ -47,11 +60,11 @@
     }
 
     #Contacts .contacts_container .response{
-        margin-left: 130px;
+        margin-left: 180px;
     }
 }
 
-@media screen and (max-width:790px){
+@media screen and (min-width:390px) and (max-width:800px){
     header .container{
         flex-direction: column;
     }
@@ -69,8 +82,18 @@
         display: none;
     }
 
+    #Services .box{
+        width: 300px;
+        height: 200px;
+    }
+
     #Services .services_container{
         flex-direction: column;
+    }
+
+    #Projects .box0{
+        width: 300px;
+        height: 200px;
     }
 
     #Projects .projects_container{
@@ -88,7 +111,8 @@
 
     #About  .about_container .box1{
         margin-right: 30px;
-        width: 370px;
+        width: 250px;
+        height: 500px;
     } 
     
     #Contacts .contacts_container{
@@ -100,6 +124,35 @@
     }
 
     #Contacts .contacts_container .response{
-        margin-left: 130px;
+        margin-left: 128px;
+    }
+
+}
+
+
+
+@media screen and (min-width:810px) and (max-width:1170px){
+    #Services .box{
+        width: 260px;
+        height: 400px;
+    }
+    #Projects .box0{
+        width: 260px;
+        height: 400px;
+    }
+
+    #About  .about_container .box1{
+        width: 365px;
+        height: 400px;
+    }
+
+    #About  .about_container .circle{
+        width: 300px;
+        height: 300px;
+    }
+
+    #bar .links{
+        padding-left: 500px;
+        margin-top: 200px;
     }
 }
