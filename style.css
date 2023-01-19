@@ -224,7 +224,7 @@ header{
     width: 100%;
     position: fixed;
     background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: saturate(180%) blur(10px);
+    backdrop-filter: saturate(180p) blur(10px);
 }
 
 header .container{
