@@ -223,6 +223,7 @@ body.active .wrapper .section{
 
 
 
+
 /* navbar */
 
 header{
@@ -291,7 +292,7 @@ section  .bar_container{
     display: flex;
     justify-content:space-evenly;
     align-items: center;
-    background: url(chair.jpg) no-repeat;
+    background: url(/images/chair.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -348,7 +349,7 @@ section .services_container{
     display: flex;
     justify-content:space-evenly;
     align-items: center;
-    background: url(lab.jpg) no-repeat;
+    background: url(/images/lab.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -399,11 +400,13 @@ section .projects_container{
     display: flex;
     justify-content:space-evenly;
     align-items: center;
-    background: url(sha.jpg) no-repeat;
+    background: url(/images/sha.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
+
+
 
 section .projects_container .box0{
     width: 300px;
@@ -421,7 +424,7 @@ section .projects_container .box0{
 section .projects_container .box0:first-child .image{
     width: 100%; 
     height: 100%; 
-    background: url(pexels-pixabay-220301.jpg) no-repeat;
+    background:url(/images/Screenshot\ from\ 2023-01-08\ 15-13-07.png) no-repeat;
     background-size: cover;
     background-position: top;
     backface-visibility: hidden;
@@ -429,7 +432,7 @@ section .projects_container .box0:first-child .image{
 section .projects_container .box0:nth-child(2) .image{
     width: 100%;
     height: 100%;
-    background:url(ss.png) no-repeat;
+    background:url(/images/ss.png) no-repeat;
     background-size: cover;
     background-position: left;
     backface-visibility: hidden;
@@ -437,7 +440,7 @@ section .projects_container .box0:nth-child(2) .image{
 section .projects_container .box0:last-child .image{
     width: 100%;
     height: 100%;
-    background:url(odoo.png) no-repeat;
+    background:url(/images/odoo.png) no-repeat;
     background-size: cover;
     background-position: center;
     backface-visibility: hidden;
@@ -485,7 +488,7 @@ section .about_container{
     display: flex;
     justify-content:space-between;
     align-items: center;
-    background: url(aboutm.jpg) no-repeat;
+    background: url(/images/aboutm.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -516,7 +519,7 @@ section .about_container .circle{
     width: 200px;
     height: 200px;
     margin-right: 80px;
-    background: url(islampro.jpg) no-repeat;
+    background: url(/images/islampro.jpg) no-repeat;
     background-size: cover;
     background-position: top;
     border-radius: 50%;
@@ -536,7 +539,7 @@ section .contacts_container{
     display: flex;
     justify-content:space-evenly;
     align-items: center;
-    background: url(sand1.jpg) no-repeat;
+    background: url(/images/sand1.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -547,7 +550,7 @@ section .contacts_container .box2{
     height: 250px;
     margin-left: 30px;
     margin-bottom: 50px;
-    background: url(contact3.jpg);
+    background: url(/images/contact3.jpg);
     background-size: cover;
     background-position: center;
 }
